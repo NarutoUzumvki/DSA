@@ -1,18 +1,30 @@
-class Dictionary:
+ 
+def count_element(  list_):
+    
+    dict_ = {} 
+    for ele in list_ :
+        if ele not in dict_:
+            dict_[ele]=""
+            count = 1
+        elif ele in dict_:
+            count += 1 
+            
+        else :
+            pass
+            
+        
+        print(count)
+         
+    
+    
+    return dict_ 
 
-    def count(self ,dict_):
-        for ele in list_ :
-            dict_[ele] = "" 
-             
-        return dict_ 
 
+count = 0
+list_ = [5, 19, 56, 39, 56 ,19 ,19]
 
-
-
-list_ = ["pundri" , "sundri" ,56 ,39 ,56]
-dict_ = {}
 
 print(list_)
-obj = Dictionary()
-
-print(obj.count(dict_))
+ 
+sol = count_element(list_)
+print(sol)
