@@ -27,20 +27,20 @@ class Calculator:
 
     # Division
 
-    def divide ( self , n1 , n2 ):
+    def divide ( self , numerator , dinominator ):
         self.n1 = n1
         self.n2 = n2
 
         if n1 == 0 :
-            print(" cant divide 0  : ")
+            print(" can't divide 0  : ")
             return
 
         elif  n2 == 0 :
             print("Undefined Value : ")
 
         else:
-            divide_= ( n1 / n2 )
-            return divide_
+            quotient= ( n1 / n2 )
+            return quotient
 
 
     # Power_func
@@ -57,7 +57,7 @@ class Calculator:
         
 
 
-if __name__== "__main__":
+if __name__ == "__main__":
 
     object=Calculator()
     ans_sum = object.sum_of_no(10,5)
