@@ -59,34 +59,54 @@
 
 class Queue:
 
-    def __init__(self,q):
+    def __init__(self , q):
         self.q = q
     
-    def push_to_queue(self,val):
+    def push_to_queue(self , val):
+        
         print("Pushing an element to Queue!")
         print(val)
-        b = self.q.append(val)
-        return b
+        self.q.append(val)
+
 
     def pop_from_queue(self):
-        print("Popping an Element..!")
-        v = self.q.pop(0)
-        return v
+        if len(self.q)>0:
+            print("Popping an Element..!")
+            val = self.q.pop(0)
+            return val
+        else:
+            print("Empty Queue!")
+        
 
     def top_of_queue(self):
         print("TOP of the Queue..!")
 
-        i=self.q[0]
-        return i
+        if len(self.q)>0:
+            top = self.q[0]
+            return top
+
+        else:
+            print("Empty Queue..!")
+
+        
+
+         
+       
+
+
+if __name__=="__main__":
+
+    print("Let's try to implement Queue Here...!")
+    print(" Note : Queue --> FIFO ")
 
 
 
-print("Let's try to implement Queue Here...!")
-print(" Note : Queue --> FIFO ")
 
 
 
-queue_lst=[2,58,45]
+queue_lst=[ 2]
+
+queue_list1=[]
 
 print("Initial Queue elements..!")
 print(queue_lst)
@@ -101,6 +121,17 @@ print(queue_lst)
 
 i=a.top_of_queue()
 print(i)
+
+b=Queue(queue_list1)
+print()
+b.push_to_queue(55)
+
+
+
+
+  
+
+
 
 
 
