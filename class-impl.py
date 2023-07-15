@@ -3,24 +3,21 @@ class Calculator:
     # Addition
 
     def sum_of_no(self, n1 , n2):
-        self.n1 = n1
-        self.n2 = n2
+         
         sum_ = (n1 + n2)
         return sum_
 
     # Subtraction
 
-    def diff_of_no(self , n1 , n2):
-        self.n1 = n1
-        self.n2 = n2
+    def diff_of_no(self, n1 , n2=9):
+      
         diff = (n1-n2)
         return diff
 
     # Multiplication
 
     def multiply_no( self , n1 , n2 ):
-        self.n1 = n1
-        self .n2 = n2
+         
         multiply_ = (n1 * n2)
         return multiply_
 
@@ -28,18 +25,17 @@ class Calculator:
     # Division
 
     def divide ( self , numerator , dinominator ):
-        self.n1 = n1
-        self.n2 = n2
+         
 
-        if n1 == 0 :
+        if numerator == 0 :
             print(" can't divide 0  : ")
             return
 
-        elif  n2 == 0 :
+        elif  dinominator == 0 :
             print("Undefined Value : ")
 
         else:
-            quotient= ( n1 / n2 )
+            quotient= ( numerator / dinominator )
             return quotient
 
 
@@ -47,9 +43,7 @@ class Calculator:
 
 
     def power_of_no( self , n1 , n2 ):
-        self.n1 = n1
-        self.n2 = n2
-
+         
         power_ = (n1 ** n2)
         return power_
 
@@ -64,7 +58,7 @@ if __name__ == "__main__":
     print("the Sum is : ")
     print(ans_sum)
 
-    ans_diff = object.diff_of_no(10,5)
+    ans_diff = object.diff_of_no(10)
     print("The Diff. is : ")
     print(ans_diff)
 
