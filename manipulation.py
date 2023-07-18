@@ -66,13 +66,17 @@ def give_sol(dictionary):
 
     for key in dictionary:
         temp_list = []
-        for value in key:
-            print(value)
+        for value in dictionary[key]:
+            
             if sol[value] == 1 :
-                val = temp_list.append(value)
-        dictionary[key] = val
+                print(value) 
+                temp_list.append(value)
+                # print(val)
+            
+           
+        dictionary[key] = temp_list
 
-    return dictionary
+    return dictionary 
 
 
 
