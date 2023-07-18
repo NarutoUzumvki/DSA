@@ -49,7 +49,7 @@
 
 
 
-def unique_val(dictionary):
+def get_unique_val(dictionary):
     new_seq = {}
     for value in dictionary.values():
         for elements in value:
@@ -68,11 +68,10 @@ def give_sol(dictionary):
         temp_list = []
         for value in dictionary[key]:
             
-            if sol[value] == 1 :
-                print(value) 
+            if unique_value[value] == 1 :
+                # print(value) 
                 temp_list.append(value)
                 # print(val)
-            
            
         dictionary[key] = temp_list
 
@@ -80,12 +79,15 @@ def give_sol(dictionary):
 
 
 
+ 
 dictionary = {"Manjeet":[1, 4, 5, 6] , "Akash":[1, 8, 9], "Nikhil":[10, 22, 4], "Akshat":[5, 11, 22]}
-sol = unique_val(dictionary)
-print(sol)
+unique_value = "The Unique values of keys are {} ."
+print(unique_value.format(get_unique_val(dictionary)))
 
-ans = give_sol(dictionary)
-print(ans)
+sol = "The Solution is {} ."
+print(sol.format(give_sol(dictionary)))
 
 
-    
+
+
+
