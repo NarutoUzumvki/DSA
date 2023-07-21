@@ -1,15 +1,18 @@
-class Student ():
+class Student():
 
-    def __init__(self, name, roll_no, standard, student_marks):
+    def __init__(self, name, roll_no, subjects):
         self.name = name
         self.roll_no = roll_no
-        self.standard = standard
-        self.student_marks = student_marks
+        self.subjects = subjects
+        self.total_marks = 0
+        self.percent = 0
+        self.pass_status = None
+        
 
 
-    def get_subject_marks(self,english,maths,physics,chemistry,biology):
-        subjects={"English" : english , "Maths": maths, "Physics" : physics , "Chemistry":chemistry, "Biology":biology}
-        return subjects
+    # def get_subject_marks(self,english,maths,physics,chemistry,biology):
+    #     # subjects={"English" : english , "Maths": maths, "Physics" : physics , "Chemistry":chemistry, "Biology":biology}
+    #     return subjects
 
     def get_student_details( self, name, roll_no, standard, student_marks):
         student_details = {"name":name , "roll_no" :roll_no, "standard" : standard, "Student_Marks":student_marks} 
@@ -54,29 +57,44 @@ class Student ():
 
 
 
-s1 = Student( "Naruto", 7, 12,0)
-student_marks = s1.get_subject_marks(55,98,75,89,96)
-# print(student_marks)
-print(" The Student's Details are : ")
-student_details = s1.get_student_details("Naruto", 7, 12 ,student_marks)
-print(student_details)
+# s1 = Student( "Naruto", 7, 12,0)
+# student_marks = s1.get_subject_marks(55,98,75,89,96)
+# # print(student_marks)
+# print(" The Student's Details are : ")
+# student_details = s1.get_student_details("Naruto", 7, 12 ,student_marks)
+# print(student_details)
 
-total_subjects = s1.get_total_subjects(student_marks)
+# total_subjects = s1.get_total_subjects(student_marks)
 
-print(" Condition ---> If student acquires 50% ... or more he passes the examination ...and if He scores less than that he fails.")
+# print(" Condition ---> If student acquires 50% ... or more he passes the examination ...and if He scores less than that he fails.")
 
-student_total_marks = s1.get_total_marks(student_marks)
-print(student_total_marks)
+# student_total_marks = s1.get_total_marks(student_marks)
+# print(student_total_marks)
 
-student_average_marks = s1.get_average_marks(student_total_marks, student_marks)
-print(student_average_marks)
+# student_average_marks = s1.get_average_marks(student_total_marks, student_marks)
+# print(student_average_marks)
  
-pass_or_fail = s1.check_pass_or_fail(student_total_marks)
-print(pass_or_fail)
+# pass_or_fail = s1.check_pass_or_fail(student_total_marks)
+# print(pass_or_fail)
+
+
+ 
+
+
+students_dict = {"1": {"name": "vijay" , "subjects": {"maths":70, "english": 87, "physics": 75}},
+                 "2": {"name": "mugiwara" , "subjects": {"maths":80, "english": 77, "physics": 65}}}
+
+students = []
+for roll_no, student in students_dict.items():
+    student_object = Student(roll_no=roll_no, name=student["name"], subjects=student["subjects"])    # name = student_dict[roll_no]["name"]  
+    students.append(student_object)
+
+print(students[1])
+print(students[0])
 
 
 
 
-
-
+# student_dict["1"]["name"]
+# student_dict["2"]["subject"]["maths"]
 

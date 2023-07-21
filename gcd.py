@@ -5,8 +5,8 @@ def greatest_common_divisor ( m, n):
             list_m.append(i)
 
     list_n = []
-    for j in range (1,m+1):
-        if m % j == 0 :
+    for j in range (1,n+1):
+        if n % j == 0 :
             list_n.append(j)
 
     list_common_factors= []
